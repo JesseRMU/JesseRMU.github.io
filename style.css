@@ -16,6 +16,7 @@ ul {
 margin-left: 40px;
 }
 
+
 ul li {
 list-style: none;
 display: inline-block;
@@ -35,3 +36,8 @@ ul li a {
 ul li a:hover {
     color: red;
 }
+
+.active {
+  
+    color: red;
+  }
