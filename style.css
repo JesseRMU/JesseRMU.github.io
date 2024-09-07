@@ -116,12 +116,15 @@ section p {
 
 #artists {
     max-width: 85%;
-    margin: 0 auto; /* Centers the section horizontally */
-    padding: 20px; /* Adds space inside the section */
+    margin: 0 auto;
+    /* Centers the section horizontally */
+    padding: 20px;
+    /* Adds space inside the section */
     background-color: white;
-    border-radius: 8px; /* Optional: Adds rounded corners for a nicer look */
-  }
-  
+    border-radius: 8px;
+    /* Optional: Adds rounded corners for a nicer look */
+}
+
 
 /* tekst "artists i've worked with" */
 #artists h2 {
@@ -142,18 +145,47 @@ section p {
 }
 
 .gallery img {
-    width: 100%; /* Make the image take full width of the figure */
-    height: 250px; /* Set a specific height for all images */
-    object-fit: cover; /* Ensures the image fits within the specified dimensions and is cropped if needed */
-    display: block; /* Ensures no unwanted spaces */
-  }
-  
+    width: 100%;
+    /* Make the image take full width of the figure */
+    height: 250px;
+    /* Set a specific height for all images */
+    object-fit: cover;
+    /* Ensures the image fits within the specified dimensions and is cropped if needed */
+    display: block;
+    /* Ensures no unwanted spaces */
+    position: relative;
+}
 
-.gallery figcaption { 
+
+.gallery figcaption {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    margin-top: 10px; 
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 2;
+}
+
+.gallery figure::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.gallery figure:hover::before {
+    opacity: 1;
+}
+
+
+.gallery figure:hover figcaption {
+    opacity: 1;
 }
