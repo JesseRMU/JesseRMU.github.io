@@ -113,9 +113,15 @@ section p {
 }
 
 /* bovendste balk van "artists i've worked with" */
+
 #artists {
+    max-width: 85%;
+    margin: 0 auto; /* Centers the section horizontally */
+    padding: 20px; /* Adds space inside the section */
     background-color: white;
-}
+    border-radius: 8px; /* Optional: Adds rounded corners for a nicer look */
+  }
+  
 
 /* tekst "artists i've worked with" */
 #artists h2 {
@@ -129,19 +135,25 @@ section p {
 }
 
 .gallery figure {
-    flex: 1 1 calc(50% - 20px);
+    flex: 1 1 calc(25% - 20px);
     box-sizing: border-box;
     margin: 0;
+    position: relative;
 }
 
 .gallery img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
+    width: 100%; /* Make the image take full width of the figure */
+    height: 250px; /* Set a specific height for all images */
+    object-fit: cover; /* Ensures the image fits within the specified dimensions and is cropped if needed */
+    display: block; /* Ensures no unwanted spaces */
+  }
+  
 
 .gallery figcaption { 
-    text-align: center; /* Centers the text */
-    margin-top: 10px; /* Adds space above the caption */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 10px; 
 }
