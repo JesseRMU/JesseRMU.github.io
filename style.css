@@ -132,30 +132,24 @@ section p {
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
+    gap: 20px; /* Space between the items */
 }
 
 .gallery figure {
-    flex: 1 1 calc(25% - 20px);
-    box-sizing: border-box;
     margin: 0;
     position: relative;
+    overflow: hidden;
+    aspect-ratio: 1/1; /* Ensures square images */
 }
 
 .gallery img {
-    width: 100%;
-    /* Make the image take full width of the figure */
-    height: 250px;
-    /* Set a specific height for all images */
-    object-fit: cover;
-    /* Ensures the image fits within the specified dimensions and is cropped if needed */
-    display: block;
-    /* Ensures no unwanted spaces */
-    position: relative;
+    border-radius: 10px;
+    width: 100%; /* Forces the image to fill the figure */
+    height: 100%; /* Ensures the image fills the entire figure */
+    object-fit: cover; /* Ensures the image is cropped if necessary */
 }
-
 
 .gallery figcaption {
     position: absolute;
@@ -185,7 +179,18 @@ section p {
     opacity: 1;
 }
 
-
 .gallery figure:hover figcaption {
     opacity: 1;
+}
+
+
+.gallery a {
+    display: block;
+    text-decoration: none;
+}
+
+
+.gallery figure {
+    position: relative;
+    overflow: hidden;
 }
