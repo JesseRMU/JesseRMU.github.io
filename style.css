@@ -115,14 +115,15 @@ section p {
 /* bovendste balk van "artists i've worked with" */
 
 #artists {
-    max-width: 85%;
+    max-width: 65%;
     margin: 0 auto;
-    /* Centers the section horizontally */
     padding: 20px;
-    /* Adds space inside the section */
     background-color: white;
     border-radius: 8px;
-    /* Optional: Adds rounded corners for a nicer look */
+    border: 10px transparent;
+    background: linear-gradient(to right, #ff6f61, #ffc107);
+    background-clip: border-box; 
+    padding: 5px
 }
 
 
@@ -133,22 +134,28 @@ section p {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
-    gap: 20px; /* Space between the items */
+    grid-template-columns: repeat(4, 1fr);
+    /* Create 4 equal columns */
+    gap: 20px;
+    /* Space between the items */
 }
 
 .gallery figure {
     margin: 0;
     position: relative;
     overflow: hidden;
-    aspect-ratio: 1/1; /* Ensures square images */
+    aspect-ratio: 1/1;
+    /* Ensures square images */
 }
 
 .gallery img {
     border-radius: 10px;
-    width: 100%; /* Forces the image to fill the figure */
-    height: 100%; /* Ensures the image fills the entire figure */
-    object-fit: cover; /* Ensures the image is cropped if necessary */
+    width: 100%;
+    /* Forces the image to fill the figure */
+    height: 100%;
+    /* Ensures the image fills the entire figure */
+    object-fit: cover;
+    /* Ensures the image is cropped if necessary */
 }
 
 .gallery figcaption {
@@ -189,8 +196,33 @@ section p {
     text-decoration: none;
 }
 
-
 .gallery figure {
     position: relative;
     overflow: hidden;
 }
+
+/* head tekst fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* head tekst fadeIn */
+header h1 {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
