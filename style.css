@@ -37,20 +37,21 @@ ul li {
     margin: 0 15px;
 }
 
-ul li a {
+nav ul li a {
     color: #e0e0e0;
     font-size: 16px;
     text-decoration: none;
     transition: color 0.3s;
-
 }
 
-ul li a:hover,
+nav ul li a:hover,
 .active {
-    color: #ff6f61;
+    color: transparent;
+    background: linear-gradient(to right, #ff6f61, #ffc107);
+    background-clip: text;
 }
 
-header .logo {
+nav .logo {
     background-image: url(images/hz-logo.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -118,11 +119,10 @@ section p {
     max-width: 65%;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
     border-radius: 8px;
     border: 10px transparent;
     background: linear-gradient(to right, #ff6f61, #ffc107);
-    background-clip: border-box; 
+    background-clip: border-box;
     padding: 5px
 }
 
@@ -151,9 +151,7 @@ section p {
 .gallery img {
     border-radius: 10px;
     width: 100%;
-    /* Forces the image to fill the figure */
     height: 100%;
-    /* Ensures the image fills the entire figure */
     object-fit: cover;
     /* Ensures the image is cropped if necessary */
 }
@@ -179,6 +177,7 @@ section p {
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 0.3s;
+    border-radius: 8px;
     z-index: 1;
 }
 
@@ -207,6 +206,7 @@ section p {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -225,4 +225,3 @@ header h1 {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 20px;
 }
-
