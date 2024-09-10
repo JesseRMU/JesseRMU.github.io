@@ -28,7 +28,7 @@ nav {
   z-index: 2;
 }
 
-nav ul  {
+nav ul {
   list-style: none;
   display: flex;
   margin: 0;
@@ -124,12 +124,35 @@ section p {
   padding: 20px;
   border-radius: 8px;
   border: 10px transparent;
-  background: linear-gradient(to right, #ff6f61, #ffc107);
+  /* background: linear-gradient(to right, #ff6f61, #ffc107); */
   background-clip: border-box;
+  position: relative;
+  margin-top: 30px;
+}
+
+#artists::after, #artists::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), red, blue, red);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 8px;
+  animation: 3s spin linear infinite;
+  
+}
+
+#artists::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
 }
 
 #artists h2 {
-  color: #2c2c2c;
+  color: #fff;
 }
 
 .gallery {
@@ -321,37 +344,42 @@ section p {
   position: relative;
 }
 
+/* gradiant animation */
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
 
-.characteristics::after, .characteristics::before {
-  content: '';
-position: absolute;
-height: 100%;
-width: 100%;
-background-image: conic-gradient(from var(--angle), red,blue,red);
-top: 50%;
-left: 50%;
-translate: -50% -50%;
-z-index: -1;
-padding: 3px;
-border-radius: 8px;
-animation: 3s spin linear infinite;
-}
-
+/* border */
+.characteristics::after,
 .characteristics::before {
-filter: blur(1.5rem);
-opacity: 0.5;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), red, blue, red);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 8px;
+  animation: 3s spin linear infinite;
 }
 
-@keyframes spin{
-  from{
+  /* glowing effect */
+.characteristics::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+/* gradiant animation */
+@keyframes spin {
+  from {
     --angle: 0deg;
   }
-  to{
+  to {
     --angle: 360deg;
   }
 }
