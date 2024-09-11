@@ -81,6 +81,14 @@ header div {
   font-weight: bold;
 }
 
+.profile {
+  background-image: url(images/dj\ blue\ longer\ screen.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
 header div::after {
   content: "";
   position: absolute;
