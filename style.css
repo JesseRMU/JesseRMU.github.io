@@ -5,11 +5,13 @@
   box-sizing: border-box;
 }
 
+
 /* Body and Text */
 body {
   background-color: #1e1e1e;
   font-family: "Arial", sans-serif;
   color: #e0e0e0;
+  padding-bottom: 200px;
 }
 
 /* Header and Navigation */
@@ -390,4 +392,45 @@ section p {
   to {
     --angle: 360deg;
   }
+}
+
+
+/* faq */
+
+.faq {
+
+}
+
+.faq-section {
+  margin: 40px;
+  position: relative;
+}
+
+#lower-margin {
+  margin-top: 20px;
+}
+
+.faq .faq-section p {
+  margin-top: 20px;
+}
+
+.faq-section::after,
+.faq-section::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), red, blue, red);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 8px;
+  animation: 3s spin linear infinite;
+}
+
+.faq-section::before {
+  filter: blur(1.5rem);
+  opacity: 0.3;
 }
