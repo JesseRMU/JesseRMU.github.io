@@ -55,7 +55,7 @@ nav ul li a:hover,
 }
 
 nav .logo {
-  background-image: url(images/hz-logo.png);
+  background-image: url(/images/hz-logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   height: 60px;
@@ -68,7 +68,7 @@ nav .logo {
 
 header div {
   position: relative;
-  background-image: url(images/night\ city\ ict.webp);
+  background-image: url(/images/night\ city\ ict.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -83,7 +83,7 @@ header div {
 }
 
 .profile {
-  background-image: url(images/dj\ blue\ longer\ screen.jpg);
+  background-image: url(/images/dj\ blue\ longer\ screen.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
