@@ -313,24 +313,29 @@ section p {
   from {
     --angle: 0deg;
   }
+
   to {
     --angle: 360deg;
   }
 }
 
+/* Styles for the FAQ section with margin and relative positioning */
 .faq-section {
   margin: 40px;
   position: relative;
 }
 
+/* Adds extra margin at the top */
 #lower-margin {
   margin-top: 20px;
 }
 
+/* Sets top margin for paragraphs in the FAQ section */
 .faq .faq-section p {
   margin-top: 20px;
 }
 
+/* Creates animated gradient border around FAQ section */
 .faq-section::after,
 .faq-section::before {
   content: "";
@@ -341,18 +346,19 @@ section p {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  z-index: -1;
+  z-index: -1; /* Places border behind content */
   padding: 3px;
   border-radius: 8px;
-  animation: 3s spin linear infinite;
+  animation: 3s spin linear infinite; /* Makes the gradient spin */
 }
 
+/* Adds glowing effect */
 .faq-section::before {
   filter: blur(1.5rem);
   opacity: 0.3;
 }
 
-/* border-spacing: 8px; */
+/* Styles for the table */
 table {
   text-align: left;
   background-color: #2c2c2c;
@@ -363,21 +369,25 @@ table {
   margin-right: auto;
 }
 
+/* Ensures the table, th, and td don't have space between them */
 table,
 th,
 td {
   border-collapse: collapse;
 }
 
+/* Adds padding to table header and data cells */
 th,
 td {
   padding: 10px;
 }
 
+/* Adds a white border around table cells */
 td {
   border: 2px solid white;
 }
 
+/* Styles for the footer, fixing it at the bottom of the page */
 .footer {
   position: fixed;
   left: 0;
@@ -386,33 +396,67 @@ td {
   background-color: #2c2c2c;
   color: white;
   text-align: center;
-  height: 30px;
+  height: 70px;
 }
 
+/* Footer text styling */
 .footer ul {
   position: relative;
   font-size: 20px;
-  padding-top: 3px;
+  padding-top: 7px;
   letter-spacing: 5px;
 }
 
+/* Footer link styling */
 .footer ul a {
+  margin-top: 2px;
   color: #fff;
 }
 
+/* Styles for the aside element */
+aside {
+  margin-top: -4px;
+}
+
+/* Makes aside list items full-width */
+aside ul {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Styles for aside links, smaller font size and reduced opacity */
+aside ul a {
+  font-size: 12px;
+  padding: 8px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+/* Adds hover effect on aside links */
+aside ul a:hover {
+  text-decoration: underline;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+/* Styles for the blog section */
 .blog-section {
   margin: 40px;
   position: relative;
 }
 
+/* Adds top margin for the blog section */
 #lower-margin {
   margin-top: 20px;
 }
 
+/* Adds top margin for paragraphs in the blog section */
 .blog .blog-section p {
   margin-top: 20px;
 }
 
+/* Creates animated glowing borde to blog section */
 .blog-section::after,
 .blog-section::before {
   content: "";
@@ -429,19 +473,33 @@ td {
   animation: 3s spin linear infinite;
 }
 
+/* Adds glowing effect to the blog section border */
 .blog-section::before {
   filter: blur(1.5rem);
   opacity: 0.3;
 }
 
-/* glowing hover effect */
+/* Adds glowing hover effect to the blog section */
 .blog-section::after,
 .blog-section::before {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 
+/* Makes the glowing effect visible on hover */
 .blog-section:hover:after,
 .blog-section:hover:before {
   opacity: 1;
+}
+
+/* Styles links in the blog*/
+.blog .blog-section p a {
+  text-decoration: none;
+  color: blueviolet;
+  z-index: 100;
+}
+
+/* Adds underline to links on hover */
+.blog .blog-section p a:hover {
+  text-decoration: underline;
 }
