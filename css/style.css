@@ -499,7 +499,7 @@ aside ul a:hover {
   z-index: 100;
 }
 
-/* Adds underline to links on hover */
+/* Adds underline to linked "read me" on hover */
 .blog .blog-section p a:hover {
   text-decoration: underline;
 }
